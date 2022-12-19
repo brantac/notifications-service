@@ -16,13 +16,13 @@ This app is a microservice responsible for creating and mananging notifications.
 - DDD
 
 ## What you can do with the app :✨
-- [X] [Create a notification](#create-a-notification)
-- [X] [Read a notification](#read-unread-or-cancel-a-notification)
-- [X] [Unread a notification](#read-unread-or-cancel-a-notification)
-- [X] [Cancel a notification](#read-unread-or-cancel-a-notification)
-- [X] [Count the amount of notifications](#count-notifications-by-recipient)
-- [X] [Get the notifications](#get-notifications-by-recipient)
-- [ ] Communicate with a async messaging platform
+- ✅ [Create a notification](#create-a-notification)
+- ✅ [Read a notification](#read-unread-or-cancel-a-notification)
+- ✅ [Unread a notification](#read-unread-or-cancel-a-notification)
+- ✅ [Cancel a notification](#read-unread-or-cancel-a-notification)
+- ✅ [Count the amount of notifications](#count-notifications-by-recipient)
+- ✅ [Get the notifications](#get-notifications-by-recipient)
+- 🙅🏽‍♂️ (WIP) Communicate with a async messaging platform
 
 ## What you need to run this project
 
