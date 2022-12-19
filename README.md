@@ -1,6 +1,6 @@
 # Notifications service
 
-This app is a microservice responsible for creating and mananging notifications. It was developed during the [Rocketseat](https://github.com/Rocketseat) *Ignite Lab | Node.js* course.
+This app is a service responsible for creating and mananging notifications. It was developed during the [Rocketseat](https://github.com/Rocketseat) *Ignite Lab | Node.js* course.
 
 ### Stack used in this project:
 - NestJS
