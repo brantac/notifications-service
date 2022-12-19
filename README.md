@@ -28,9 +28,9 @@ This app is a service responsible for creating and mananging notifications. It w
 
 - Node.js
 
-## Set up
+## 1. Set up
 
-### 1. Install the dependencies
+### Install the dependencies
 ```bash
 # If you use yarn
 yarn install
@@ -39,7 +39,9 @@ yarn install
 npm install
 ```
 
-### 2. Set up prisma
+### Set up prisma
+
+<sup>Note: Follow this step only if want to use another database provider. In this case, remove the `./prisma` directory on the root first.</sup>
 
 ```
 npx prisma init --datasource-provider sqlite
@@ -77,7 +79,7 @@ Run this command to open a browser UI and explore your database.
 npx prisma studio
 ```
 
-## Run the app
+## 2. Run the app
 ```bash
 # development
 $ yarn run start
@@ -89,7 +91,7 @@ $ yarn run start:dev
 $ yarn run start:prod
 ```
 
-## Test
+## 3. Test
 
 ```bash
 # unit tests
