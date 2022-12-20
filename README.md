@@ -41,8 +41,6 @@ npm install
 
 ### Set up prisma
 
-<sup>Note: Follow this step only if want to use another database provider. In this case, remove the `./prisma` directory on the root first.</sup>
-
 ```
 npx prisma init --datasource-provider sqlite
 ```
