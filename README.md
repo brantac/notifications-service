@@ -6,6 +6,7 @@ This app is a service responsible for creating and mananging notifications. It w
 - NestJS
 - TypeScript
 - Prisma
+- Kafka
 
 ### Other tools:
 - Eslint
@@ -14,6 +15,7 @@ This app is a service responsible for creating and mananging notifications. It w
 - SOLID: Single Responsibility Principle; Dependency Inversion Principle;
 - Factory pattern
 - DDD
+- [Upstash](https://upstash.com)
 
 ## Features ✨
 - ✅ [Create a notification](#create-a-notification)
@@ -22,7 +24,6 @@ This app is a service responsible for creating and mananging notifications. It w
 - ✅ [Cancel a notification](#read-unread-or-cancel-a-notification)
 - ✅ [Count the amount of notifications](#count-notifications-by-recipient)
 - ✅ [Get the notifications](#get-notifications-by-recipient)
-- 🙅🏽‍♂️ (WIP) Communicate with a async messaging platform
 
 ## What you need to run this project
 
@@ -117,6 +118,8 @@ export class CreateNotificationBody {
 }
 ```
 
+<sup>Note: The `recipientId` refers to the destination of the notification. It could be  the *userId*.</sup>
+
 to the `/notifications` API.
 
 ```ts
@@ -143,7 +146,17 @@ export class Notifications {
 }
 ```
 
-<sup>The `recipientId` refers to the destination of the notification. It could be  the *userId*.</sup>
+or you can set up a producer to push a message to *Kafka* with the `'notifications.send-notification'` topic.
+
+<sup>
+Note: In order for this service to consume <i>Kafkas</i> messages, you need to define the credentials in a .env file.
+
+```
+KAFKA_BROKERS="broker"
+KAFKA_USERNAME="username"
+KAFKA_PASSWORD="password"
+```
+</sup>
 
 ## Read, unread or cancel a notification
 To *read*, *unread* and *cancel* notifications, the requests are pretty similar. You have to send the `id` of the notification in a *Patch* request to `/notifications/:id/<operation>`. Replace `<operation>` by the operation that you want to choose.
