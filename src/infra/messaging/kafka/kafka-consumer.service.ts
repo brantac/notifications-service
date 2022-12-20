@@ -10,13 +10,11 @@ export class KafkaConsumerService
     super({
       client: {
         clientId: 'notifications',
-        brokers: ['ideal-troll-12921-us1-kafka.upstash.io:9092'],
+        brokers: [process.env.KAFKA_BROKERS as string],
         sasl: {
           mechanism: 'scram-sha-256',
-          username:
-            'aWRlYWwtdHJvbGwtMTI5MjEkgB4l1GAP7JlkuQEpCdCjnU3T1vY3i87U96Q-rxc',
-          password:
-            'Xm7xxEAjwAtqVqvTqE8EOZDboW8GpZ53wZiNUgJnnzMogE-WsEhwDkCxfGNbr6iYehkaEw==',
+          username: process.env.KAFKA_USERNAME as string,
+          password: process.env.KAFKA_PASSWORD as string,
         },
         ssl: true,
       },
